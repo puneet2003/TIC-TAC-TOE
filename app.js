@@ -21,10 +21,13 @@ clickEvent();
 
 function handleBox(e){
   if(winBoxId.length > 0){
-    setTimeout(resetFunc(),0);
+    resetFunc();
         return;
       }
   const id = e.target.id;
+  console.log(document.getElementById(id).textContent)
+if(document.getElementById(id).textContent==""){
+
   if(currentPlayer === o_text)
   {
     p2.style.background = 'red';
@@ -51,6 +54,10 @@ function handleBox(e){
     }
     currentPlayer = (currentPlayer === o_text)?x_text:o_text;
   }
+
+}
+
+  
 }
 
 function winnerPlayer(c)
